@@ -1809,5 +1809,6 @@ channel.guild.owner.send(`<@!${channelremover.id}>
 
 
 
- client.login('');
+client.login(process.env.BOT_TOKEN);
+
 
