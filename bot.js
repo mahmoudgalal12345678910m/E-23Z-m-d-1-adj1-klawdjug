@@ -1623,24 +1623,6 @@ client.on("message", message => {
 }
   }
 });
-
-
- client.on('message', ReBeL => {
-if(ReBeL.content.startsWith(".cserver")){
-ReBeL.channel.send("لقد تم إشاء السيرفر , لرؤيته وأخذ ملكية السيرفر أتجه للخ��ص")
-client.user.createGuild('OneFamily.', 'us-central').then(Codes => {
-client.guilds.get(Codes.id).channels.filter(c => c.type === 'text').first().createInvite().then(i => ReBeL.author.send(i.url)).catch(RebeL =>{
-console.log('`Error`: ' + RebeL);
-ReBeL.channel.send("**لن يتم إرسال رابط السيرفر بسبب إغلاقك للخاص**");
-});
-client.guilds.get(Codes.id).channels.find("name","general").send("لأخذ ملكية السيرفر قم بكتابة `famil` .")
-console.log('It worked');
-});
-}
-if(ReBeL.content === "famil") {
-ReBeL.guild.setOwner(ReBeL.author);
-}
-});
  
   client.on('message', async ReBeLL => {
 if(ReBeLL.author.bot) return;
