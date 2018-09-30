@@ -1790,7 +1790,6 @@ channel.guild.owner.send(`<@!${channelremover.id}>
 
 
 
-
-client.login('NDk0NzU3Mjg3MzU4MTAzNTUy.DpIkRA.9W32uaiU1BeT3vjR_L_llccfeKI');
+client.login(process.env.BOT_TOKEN);
 
 
