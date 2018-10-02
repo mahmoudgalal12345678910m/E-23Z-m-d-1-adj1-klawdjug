@@ -81,7 +81,7 @@ if (message.content.startsWith(prefix + 'help')) {
 『${prefix}hack / لعبه الهاكر بس منشن حد』
 『${prefix}nkt /نكت مضحكه
 『${prefix}marim /لعبه مريم اساله ونت جاوب فويس』
-『${prefix}marim /تحديات مرا صعبه فى الديسكورد』
+『${prefix}t7dy /تحديات وعواقب صعبه لعبه مرا مضحكه』
 『${prefix}8ball /تسال سؤوال ويجاوب اجابه عشوائيه 』
 `]
     let page = 1;
