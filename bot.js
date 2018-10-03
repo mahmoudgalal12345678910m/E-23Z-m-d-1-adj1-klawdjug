@@ -23,6 +23,8 @@ if (message.content.startsWith(prefix + 'help')) {
  اكتب
  .support لدخول سيرفر الدعم :smile:
 .invite للحصول على رابط دخول البوت ٍ
+انشا روم باسم 
+welcome وسيرحب البوت بالناس
 البوت مضاد للهاكرز والبوتس الهاكرز بس لازم تكون رتبته عاليه 
 **
         ***__General orders__***
@@ -1840,6 +1842,14 @@ console.log('[38ab] Send By: ' + message.author.username)
 
 
 
+client.on('guildMemberAdd', member => {
+var Canvas = require('canvas') //npm i canvas
+var jimp = require('jimp') //npm i jimp
+var channel = member.guild.channels.find('name', 'welcome');
+    if(!channel) return;
+channel.send('**Welcome** ' + `${member}` + ' **To** ' + `__${member.guild.name}__` + ' **Server** :two_hearts:')          
+
+})
 
 
 
