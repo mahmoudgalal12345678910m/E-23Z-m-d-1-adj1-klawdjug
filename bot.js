@@ -141,7 +141,7 @@ client.on('message', message => {
             .setTitle('**المعلومات التى توصل لها البوت** ')
             .addField('``My Ping``' , [`${Date.now() - message.createdTimestamp}` + 'MS'], true)
             .addField('``RAM Usage``', `[${(process.memoryUsage().rss / 1048576).toFixed()}MB]`, true)
-            .addField('**عدد السيرفرات التى تملكها**', [client.guilds.size], true)
+            .addField('**عدد السيرفرات التى بها البوت**', [client.guilds.size], true)
             .addField('``My Name``' , `[ ${client.user.tag} ]` , true)
             .addField('``My ID``' , `[ ${client.user.id} ]` , true)
             .addField("** اسمك **", `${message.author.username}`)
@@ -580,7 +580,7 @@ client.on('message', message => {
                .addField(' الاعضاء👥 ',` [${client.users.size}] `)
                .addField('الرومات📚 ',`[${client.channels.size}]`)
                .addField(' البنق🚀 ',`[${Date.now() - message.createdTimestamp}]`)
-               .addField(`G a l a l | ● ØF ●`)
+               .addField(`G A | ● ØF ●`)
                .setColor('#7d2dbe')
                  message.channel.sendEmbed(embed);
                    }
@@ -1160,7 +1160,7 @@ client.on("message", message => {
   if(!message.channel.guild) return message.channel.send('**هذا الأمر فقط للسيرفرات**').then(m => m.delete(5000));
   if(!message.member.hasPermission('ADMINISTRATOR')) return      message.channel.send('**للأسف لا تمتلك صلاحية** `ADMINISTRATOR`' );
   let args = message.content.split(" ").join(" ").slice(2 + prefix.length);
-  let copy = "ONEFAMILY";
+  let copy = "SmartBot";
   let request = `Requested By ${message.author.username}`;
   if (!args) return message.reply('**يجب عليك كتابة كلمة او جملة لإرسال البرودكاست**');message.channel.send(`**هل أنت متأكد من إرسالك البرودكاست؟ \nمحتوى البرودكاست:** \` ${args}\``).then(msg => {
   msg.react('✅')
@@ -1308,7 +1308,7 @@ Owner Server : __${guild.owner}__
 Members : __${guild.memberCount}__
         Servers Counter : __${client.guilds.size}__**`)
                  .setColor("#f3ae10")
-                 .setFooter('OneFamily' , client.user.avatarURL)
+                 .setFooter('Smartbot' , client.user.avatarURL)
                    client.channels.get("494774916676059136").send({embed});
         }
 
@@ -1329,7 +1329,7 @@ Members : __${guild.memberCount}__
 Servers Counter : __${client.guilds.size}__**`)
          .setColor("#f3ae10")
          .addField("New Server!")
-         .setFooter('OneFamily' , client.user.avatarURL)
+         .setFooter('SmartBot' , client.user.avatarURL)
            client.channels.get("494774916676059136").send({embed});
 }
 
