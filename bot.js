@@ -1695,7 +1695,7 @@ console.log(error)
 try {
 guild.members.get(banner).ban();
   rebellog.send(`<@!${banner.id}>
-حآول العبث بالسيرفر @everyone`);
+حآول العبث بالسيرفر `);
 guild.owner.send(`<@!${banner.id}>
 حآول العبث بالسيرفر ${guild.name}`)
     setTimeout(() => {
@@ -1726,7 +1726,7 @@ console.log(error)
  if(channelc[channelcreate.id].created >= Onumber ) {
     Oguild.members.get(channelcreate.id).kick();
 rebellog.send(`<@!${channelcreate.id}>
-حآول العبث بالسيرفر @everyone`);
+حآول العبث بالسيرفر `);
 channel.guild.owner.send(`<@!${channelcreate.id}>
 حآول العبث بالسيرفر ${channel.guild.name}`)
 }
@@ -1753,7 +1753,7 @@ let channelr = {};
  if(channelr[channelremover.id].deleted >= Onumber ) {
   Oguild.guild.member(channelremover).kick();
 rebellog.send(`<@!${channelremover.id}>
-حآول العبث بالسيرفر @everyone`);
+حآول العبث بالسيرفر `);
 channel.guild.owner.send(`<@!${channelremover.id}>
 حآول العبث بالسيرفر ${channel.guild.name}`)
 }
