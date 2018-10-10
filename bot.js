@@ -1337,27 +1337,6 @@ Servers Counter : __${client.guilds.size}__**`)
 
 );
 
-client.on('guildMemberAdd', member => {
-    let memberavatar = member.user.avatarURL
-    let embed = new Discord.RichEmbed()
-        .setColor('RANDOM')
-        .setThumbnail(memberavatar)
-        .addField('Hello Dude' , `Welcome to the server **${member}**`)
-        .addField('User Id :', "**[" + `${member.id}` + "]**" )
-                .addField(' Member Number',`${member.guild.memberCount}`)
-
-                  .addField("Name:",`<@` + `${member.id}` + `>`, true)
-
-                                     .addField(' Server', `${member.guild.name}`,true)
-.setFooter(member.user.username,'https://images-ext-2.discordapp.net/external/JpyzxW2wMRG2874gSTdNTpC_q9AHl8x8V4SMmtRtlVk/https/orcid.org/sites/default/files/files/ID_symbol_B-W_128x128.gif')
-
-
-        .setTimestamp()
-
-    member.createDM().then(function (channel) {
-return channel.send(embed)
-    }
-    )});
 
 
 client.on('ready', function(){
