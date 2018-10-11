@@ -575,24 +575,20 @@ client.on('message', message => {
 
 
                   client.on('message', message => {
-                           if (message.content.startsWith(".bot")) {
+                           if (message.content.startsWith(".botinfo")) {
                     let embed = new Discord.RichEmbed()
                .setThumbnail(message.author.avatarURL)
                .addField(' السيرفرات🌐',`[${client.guilds.size}]  `)
-               .addField(' الاعضاء👥 ',` [${client.users.size}] `)
+               .addField('**عدد المستخدمين 👥 **' , `${client.users.size}`, true)
                .addField('الرومات📚 ',`[${client.channels.size}]`)
                .addField(' البنق🚀 ',`[${Date.now() - message.createdTimestamp}]`)
+	       .addField('**سرعة الاتصال📡**' , `${Date.now() - message.createdTimestamp}` + ' ms')
+               .addField('**استخدام المعالج💿**', `${(process.cpuUsage().rss / 10000).toFixed()}%`, true) 
                .addField(`G A | ● ØF ●`)
                .setColor('#7d2dbe')
                  message.channel.sendEmbed(embed);
                    }
                });
-
-
-
-
-
-
 
 
 
