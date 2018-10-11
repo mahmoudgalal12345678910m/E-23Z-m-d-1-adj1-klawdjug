@@ -1845,25 +1845,44 @@ console.log('[38ab] Send By: ' + message.author.username)
 
 
 
+        client.on('message', message => {
+                        let args = message.content.split(" ").slice(1).join(" ")
+if(message.content.startsWith(prefix + 'color')) {
+    if(!args) return message.channel.send('`يرجي اختيار كم لون `');
+             if (!message.member.hasPermission('MANAGE_ROLES')) return message.channel.sendMessage('`**⚠ | `[MANAGE_ROLES]` لا يوجد لديك صلاحية**'); 
+             message.channel.send("**✅ | تم عمل الالوان**");
+                  setInterval(function(){})
+                    let count = 0;
+                    let ecount = 0;
+          for(let x = 1; x < `${parseInt(args)+1}`; x++){
+            message.guild.createRole({name:x,
+              color: 'RANDOM'})
+              }
+            }
+       });
+	   
 
-client.on("guildMemberAdd", member => {
-let welcomer = member.guild.channels.find("name","welcome");
-      if(!welcomer) return;
-      if(welcomer) {
-         moment.locale('ar-ly');
-         var h = member.user;
-        let norelden = new Discord.RichEmbed()
+client.on('guildMemberAdd', member => {
+    let memberavatar = member.user.avatarURL
+    let embed = new Discord.RichEmbed()
         .setColor('RANDOM')
-        .setThumbnail(h.avatarURL)
-        .setAuthor(h.username,h.avatarURL)
-        .addField(': تاريخ دخولك الدسكورد',`${moment(member.user.createdAt).format('D/M/YYYY h:mm a')} **\n** \`${moment(member.user.createdAt).fromNow()}\``,true)            
-         .addField(': تاريخ دخولك السيرفر',`${moment(member.joinedAt).format('D/M/YYYY h:mm a ')} \n\`\`${moment(member.joinedAt).startOf(' ').fromNow()}\`\``, true)      
-         .setFooter(`${h.tag}`,"https://images-ext-2.discordapp.net/external/JpyzxW2wMRG2874gSTdNTpC_q9AHl8x8V4SMmtRtlVk/https/orcid.org/sites/default/files/files/ID_symbol_B-W_128x128.gif")
-     welcomer.send({embed:norelden});          
-               
- 
-      }
-      });
+        .setThumbnail(memberavatar)
+        .addField('Hello Dude' , `Welcome to the server **${member}**`)
+        .addField('User Id :', "**[" + `${member.id}` + "]**" )
+                .addField(' Member Number',`${member.guild.memberCount}`)
+
+                  .addField("Name:",`<@` + `${member.id}` + `>`, true)
+
+                                     .addField(' Server', `${member.guild.name}`,true)
+.setFooter(member.user.username,'https://images-ext-2.discordapp.net/external/JpyzxW2wMRG2874gSTdNTpC_q9AHl8x8V4SMmtRtlVk/https/orcid.org/sites/default/files/files/ID_symbol_B-W_128x128.gif')
+
+
+        .setTimestamp()
+
+    member.createDM().then(function (channel) {
+return channel.send(embed)
+    }
+    )});
 
 
 
