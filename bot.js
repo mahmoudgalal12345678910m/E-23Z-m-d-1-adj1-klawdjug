@@ -67,13 +67,6 @@ welcome وسيرحب البوت بالناس
 **
    `,`
 
-
-        ***__Musit orbers__***
-**
-『${prefix}play /  تشغبل اغنيه مع اسمها』
-『${prefix}skip / تغير اغنيه  』
-『${prefix}stop /ايقاف الاغنيه 』
-**
 ***__Games orders__***
  **
 『${prefix}marry  / لعبه التزاوج بس منشن للى تبيه』
