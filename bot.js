@@ -1290,7 +1290,7 @@ client.on('message', message => {
 
 
         client.on('guildDelete', guild => {
-          client.channels.get("494774916676059136")
+          client.channels.get("499749942751920128")
         const embed = new Discord.RichEmbed()
            .setAuthor(`طلعت من سيرفر ❎`)
            .setDescription(`**
@@ -1301,7 +1301,7 @@ Members : __${guild.memberCount}__
         Servers Counter : __${client.guilds.size}__**`)
                  .setColor("#f3ae10")
                  .setFooter('Smartbot' , client.user.avatarURL)
-                   client.channels.get("494774916676059136").send({embed});
+                   client.channels.get("499749942751920128").send({embed});
         }
 
         );
@@ -1310,7 +1310,7 @@ Members : __${guild.memberCount}__
 
         client.on('guildCreate', guild => {
 
-  client.channels.get("494774916676059136")
+  client.channels.get("499749942751920128")
 const embed = new Discord.RichEmbed()
    .setAuthor(`بوتك دخل سيرفر جديد مبروك ✅`)
    .setDescription(`**
@@ -1322,7 +1322,7 @@ Servers Counter : __${client.guilds.size}__**`)
          .setColor("#f3ae10")
          .addField("New Server!")
          .setFooter('SmartBot' , client.user.avatarURL)
-           client.channels.get("494774916676059136").send({embed});
+           client.channels.get("499749942751920128").send({embed});
 }
 
 );
