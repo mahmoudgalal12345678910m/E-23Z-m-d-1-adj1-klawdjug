@@ -155,7 +155,7 @@ client.on('message', message => {
            if(!message.channel.guild) return message.channel.send("This Command is Just For Servers!")
            var embed = new Discord.RichEmbed()
            .setTitle("Support Server Click here")
-           .setURL("https://discord.gg/BbecTYm")
+           .setURL("https://discord.gg/5zGFUsX")
            .setTimestamp()
            .setColor("RANDOM")
            message.channel.send({embed})
