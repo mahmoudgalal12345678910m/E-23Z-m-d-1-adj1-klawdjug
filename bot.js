@@ -918,7 +918,7 @@ client.on('message', message => {
 
       client.on('guildMemberAdd', member => {
           member.createDM().then(function (channel) {
-       return channel.send("**`سيرفر للمحترفين والجيمر تعالى` \n [https://discord.gg/h7FE8bQ]**")
+       return channel.send("**`سيرفر للمحترفين والجيمر تعالى` \n [https://discord.gg/nE8axA8]**")
           }
           )});
 
